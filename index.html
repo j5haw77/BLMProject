@@ -15,7 +15,7 @@
       border-radius: 20px;
     }
 
-    .desc p {
+    .desc p, li {
       text-align: left;
     }
 
@@ -61,7 +61,7 @@
   <script>
     var mymap = L.map('map', {
       center: [44.13, -96.93],
-      zoom: 4,
+      zoom: 1,
       maxZoom: 12,
       minZoom: 3,
       detectRetina: true
@@ -104,6 +104,11 @@
       var div = L.DomUtil.create('div', 'desc');
       div.innerHTML += "<h1>Black Lives Matter</h1>";
       div.innerHTML += "<p>This map shows Twitter activity using the &num;blacklivesmatter</br>hashtag during several times of day between 10:30 PM PST</br> on June 9 and 4:30 PM PST on June 10.";
+      div.innerHTML += "<h2>Data Sources</h2>";
+      div.innerHTML += "<ul><li>Basemap: CartoDB</li><li>Tweets: Twitter Inc.</li><li>Icons: Font Awesome</li><li>Colors: Chroma</li></ul>";
+      div.innerHTML += "<h2>Acknowledgements</h2>";
+      div.innerHTML += "<p>Major thanks to Professors Sarah Elwood and Bo Zhao for instruction</br>and guidance.";
+      div.innerHTML += "<p>Also, thank you to all the prostestors, donators, writers, and activists</br>that are working so hard to make our world better and more inclusive!";
       return div;
     };
 
